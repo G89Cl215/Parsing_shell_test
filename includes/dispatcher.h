@@ -6,7 +6,7 @@
 /*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 13:28:10 by tgouedar          #+#    #+#             */
-/*   Updated: 2019/08/22 15:51:53 by tgouedar         ###   ########.fr       */
+/*   Updated: 2019/08/24 16:59:11 by tgouedar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,18 @@
 # define DOWN_CODE			0x425b1b
 # define RIGHT_CODE			0x435b1b
 # define LEFT_CODE			0x445b1b
+# define META_A_CODE		0x611b
 # define META_B_CODE		0x621b
+# define META_C_CODE		0x631b
 # define META_D_CODE		0x641b
+# define META_E_CODE		0x651b
 # define META_F_CODE		0x661b
+# define META_G_CODE		0x671b
+# define META_H_CODE		0x681b
+# define META_I_CODE		0x691b
+# define META_J_CODE		0x6a1b
+# define META_K_CODE		0x6b1b
+# define META_L_CODE		0x6c1b
 # define BACKSPACE_CODE		0x7f
 # define META_BKSPC_CODE	0x7f1b
 # define TAB_CODE			0x09
@@ -72,15 +81,18 @@ int					ft_up_cursor(t_cursor *cursor);
 int					ft_down_cursor(t_cursor *cursor);
 int					ft_left_cursor(t_cursor *cursor);
 int					ft_right_cursor(t_cursor *cursor);
-int					ft_clear_cmd(t_cursor *cursor);
+int					ft_cut_cmd(t_cursor *cursor);
 int					ft_backspace(t_cursor *cursor);
 int					ft_end_of_stream(t_cursor *cursor);
 int					ft_start_of_line(t_cursor *cursor);
 int					ft_end_of_line(t_cursor *cursor);
-int					ft_clear_from_cursor(t_cursor *cursor);
+int					ft_cut_from_cursor(t_cursor *cursor);
 int					ft_clear_screen_key(t_cursor *cursor);
 int					ft_to_next_word(t_cursor *cursor);
+int					ft_to_next_end_word(t_cursor *cursor);
 int					ft_to_prev_word(t_cursor *cursor);
 int					ft_del_next_word(t_cursor *cursor);
+int					ft_cut_prev_word(t_cursor *cursor);
+int					ft_paste_clipboard(t_cursor *cursor);
 
 #endif

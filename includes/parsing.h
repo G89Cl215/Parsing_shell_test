@@ -6,7 +6,7 @@
 /*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/06 16:38:41 by tgouedar          #+#    #+#             */
-/*   Updated: 2019/08/22 13:48:32 by tgouedar         ###   ########.fr       */
+/*   Updated: 2019/08/24 14:56:09 by tgouedar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # define ENTER_SIG 3
 
 int			ft_termcap(char *buff, t_cursor *cursor);
-void		ft_init_cursor(t_cursor *cursor);
+void		ft_init_cursor(t_cursor *cursor, int reset_clip);
 void		ft_cursor_reset(size_t ref);
 void		ft_position_cursor(t_cursor *cursor);
 void		ft_clear_line(t_cursor *cursor);
@@ -34,6 +34,7 @@ size_t		ft_get_term_hight(void);
 void		ft_reajust_cursor_wrap(t_cursor *cursor, int flag);
 void		ft_clean_history(t_dlist **history);
 void		ft_load_history(t_cursor *cursor);
+void		ft_save_in_clipboard(t_cursor *cursor, char *to_save, size_t len);
 
 void	print_bytes(void *ptr, int size);
 

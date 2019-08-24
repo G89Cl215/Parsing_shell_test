@@ -6,7 +6,7 @@
 #    By: baavril <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/16 10:37:50 by baavril           #+#    #+#              #
-#    Updated: 2019/08/22 14:52:11 by tgouedar         ###   ########.fr        #
+#    Updated: 2019/08/24 14:52:34 by tgouedar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,8 +33,10 @@ SOURCES		=	main.c \
 				get_term_size.c \
 				history.c \
 				line_edit.c \
+				line_edit_cut.c \
 				ctrl_keys.c \
 				word_tools.c \
+				clipboard_tools.c \
 				cursor_moves.c \
 				fast_cursor_moves.c \
 

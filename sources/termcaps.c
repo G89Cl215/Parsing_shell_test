@@ -6,7 +6,7 @@
 /*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/30 21:35:32 by tgouedar          #+#    #+#             */
-/*   Updated: 2019/08/22 16:11:01 by tgouedar         ###   ########.fr       */
+/*   Updated: 2019/08/24 21:16:07 by tgouedar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ t_cap		g_termcap[] =
 	{ESC_CODE, &ft_enter},*/
 	{META_B_CODE, &ft_to_prev_word},
 	{META_F_CODE, &ft_to_next_word},
+	{META_L_CODE, &ft_to_next_end_word},
 	{META_D_CODE, &ft_del_next_word},
 	{UP_CODE, &ft_up_cursor},
 	{CTRL_P_CODE, &ft_up_cursor},
@@ -43,15 +44,17 @@ t_cap		g_termcap[] =
 */	{CTRL_A_CODE, &ft_start_of_line},
 	{CTRL_E_CODE, &ft_end_of_line},
 	{CTRL_D_CODE, &ft_end_of_stream},
-	{CTRL_K_CODE, &ft_clear_from_cursor},
+	{CTRL_K_CODE, &ft_cut_from_cursor},
 	{CTRL_L_CODE, &ft_clear_screen_key},
 /*	{CTRL_R_CODE, &ft_search_history},*/
-	{CTRL_U_CODE, &ft_clear_cmd},
-/*	{CTRL_W_CODE, &ft_clear_last_word},
-	{CTRL_U_CODE, &ft_clear_cmd},
-	{DEL_CODE, &ft_delete_key},
-	{HOME_CODE, &ft_home_key},
-	{END_CODE, &ft_end_key},*/
+//	{CTRL_T_CODE, &ft_swap_char},
+	{CTRL_U_CODE, &ft_cut_cmd},
+	{CTRL_W_CODE, &ft_cut_prev_word},
+	{CTRL_Y_CODE, &ft_paste_clipboard},
+//	{CTRL_U_CODE, &ft_clear_cmd},
+//	{DEL_CODE, &ft_delete_key},
+	{HOME_CODE, &ft_start_of_line},
+	{END_CODE, &ft_end_of_line},
 	{0, NULL}
 };
 
@@ -61,7 +64,7 @@ int		ft_enter(t_cursor *cursor)
 			ft_new_dnod(cursor->cmd_line, PAST_CMD));
 	ft_putstr("\n\r");
 	ft_putendl(cursor->cmd_line);
-	ft_init_cursor(cursor);
+	ft_init_cursor(cursor, 0);
 	ft_clean_history(&(cursor->history));
 	ft_update_line(cursor, NULL);
 	return (ENTER_CODE);
@@ -70,7 +73,6 @@ int		ft_enter(t_cursor *cursor)
 int		ft_termcap(char buff[MAX_KEY_SIZE], t_cursor *cursor)
 {
 	union u_convert		conv;
-//	union u_convert		term;
 	size_t				i;
 
 	i = 0;
@@ -83,5 +85,5 @@ int		ft_termcap(char buff[MAX_KEY_SIZE], t_cursor *cursor)
 			return (g_termcap[i].ft_(cursor));
 		i++;
 	}
-	return (0);
+	return (!(ft_isunicode((unsigned char *)buff)));
 }

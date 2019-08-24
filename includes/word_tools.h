@@ -6,14 +6,14 @@
 /*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/22 13:12:30 by tgouedar          #+#    #+#             */
-/*   Updated: 2019/08/22 16:10:59 by tgouedar         ###   ########.fr       */
+/*   Updated: 2019/08/24 13:35:03 by tgouedar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WORD_TOOLS_H
 # define WORD_TOOLS_H
 
-# define WORD_DELIM		" \t\n"
+# define WORD_DELIM		" \t\n:"
 # define bit_1				1
 # define bit_2				2
 # define bit_3				4

@@ -6,7 +6,7 @@
 /*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 18:40:46 by tgouedar          #+#    #+#             */
-/*   Updated: 2019/07/30 13:29:07 by tgouedar         ###   ########.fr       */
+/*   Updated: 2019/08/24 21:12:08 by tgouedar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ int					ft_isdigit(int c);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
+int					ft_isunicode(unsigned char *to_test);
 int					ft_isin(const char c, const char *charset);
 size_t				ft_indice(char c, char *charset);
 int					ft_toupper(int c);

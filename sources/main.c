@@ -6,7 +6,7 @@
 /*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/09 07:52:01 by tgouedar          #+#    #+#             */
-/*   Updated: 2019/08/09 10:53:23 by tgouedar         ###   ########.fr       */
+/*   Updated: 2019/08/24 15:58:31 by tgouedar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int		main()
 	int			i;
 
 	i = 0;
-	ft_init_cursor(&cursor);
+	ft_init_cursor(&cursor, 1);
 	cursor.history = NULL;
 	ft_memset(buff, '\0', MAX_KEY_SIZE);
 	raw_term_mode();

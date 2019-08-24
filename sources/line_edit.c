@@ -6,7 +6,7 @@
 /*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/09 10:42:18 by tgouedar          #+#    #+#             */
-/*   Updated: 2019/08/22 16:39:12 by tgouedar         ###   ########.fr       */
+/*   Updated: 2019/08/24 15:38:41 by tgouedar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,11 @@ int		ft_del_next_word(t_cursor *cursor)
 	ft_memmove(cursor->cmd_line + cursor->char_cursor,
 			cursor->cmd_line + word_end,
 			ft_strlen(cursor->cmd_line + word_end) + 1);
-	cursor->display_cursor = ft_cursor_conv_char_to_display(cursor->cmd_line, cursor->char_cursor);
-	cursor->line_len -= word_len;
+	ft_bzero(cursor->cmd_line + ft_strlen(cursor->cmd_line), word_len);
+	cursor->line_len = ft_strlen(cursor->cmd_line);
 	ft_update_line(cursor, NULL);
 	return (1);
 }
-
 int		ft_backspace(t_cursor *cursor)
 {
 	size_t		new_cursor;
@@ -49,5 +48,11 @@ int		ft_backspace(t_cursor *cursor)
 		ft_update_line(cursor, NULL);
 		cursor->char_cursor = new_cursor;
 	}
+	return (1);
+}
+
+int		ft_swap_char(t_cursor *cursor)
+{
+	(void)cursor;
 	return (1);
 }

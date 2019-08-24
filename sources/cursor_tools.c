@@ -6,7 +6,7 @@
 /*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/06 16:26:15 by tgouedar          #+#    #+#             */
-/*   Updated: 2019/08/22 16:10:56 by tgouedar         ###   ########.fr       */
+/*   Updated: 2019/08/24 14:49:28 by tgouedar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@
 #include "parsing.h"
 #include "word_tools.h"
 
-void	ft_init_cursor(t_cursor *cursor)
+void	ft_init_cursor(t_cursor *cursor, int reset_clip)
 {
 	ft_memset(cursor->cmd_line, '\0', MAX_LINE);
+	if ((reset_clip))
+		ft_memset(cursor->clipboard, '\0', MAX_LINE);
 	cursor->line_len = 0;
 	cursor->display_cursor = 0;
 	cursor->char_cursor = 0;

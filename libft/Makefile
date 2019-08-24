@@ -6,7 +6,7 @@
 #    By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/05 22:11:12 by tgouedar          #+#    #+#              #
-#    Updated: 2019/08/08 17:19:48 by tgouedar         ###   ########.fr        #
+#    Updated: 2019/08/24 19:00:18 by tgouedar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,7 @@ SRCFILE			= ft_swap.c\
 				  ft_isalnum.c\
 				  ft_isascii.c\
 				  ft_isprint.c\
+				  ft_isunicode.c\
 				  ft_isin.c\
 				  ft_indice.c\
 				  ft_toupper.c\

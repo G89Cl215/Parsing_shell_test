@@ -6,7 +6,7 @@
 /*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/30 15:18:50 by tgouedar          #+#    #+#             */
-/*   Updated: 2019/08/22 13:47:47 by tgouedar         ###   ########.fr       */
+/*   Updated: 2019/08/24 14:53:44 by tgouedar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef struct		s_cursor
 	size_t			char_cursor;
 	char			in_history;
 	t_dlist			*history;
+	char			clipboard[MAX_LINE];
 }					t_cursor;
 
 void	ft_position_cursor(t_cursor *cursor);
