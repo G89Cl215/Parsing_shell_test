@@ -6,7 +6,7 @@
 /*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/22 12:18:59 by tgouedar          #+#    #+#             */
-/*   Updated: 2019/08/22 16:39:13 by tgouedar         ###   ########.fr       */
+/*   Updated: 2019/08/24 21:30:47 by tgouedar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ size_t	ft_prev_word_end(char *str, size_t char_cursor)
 	return (i);
 }
 */
+
 size_t	ft_cursor_conv_char_to_display(char *str, size_t char_cursor)
 {
 	size_t		i;

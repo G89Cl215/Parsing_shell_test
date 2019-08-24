@@ -6,7 +6,7 @@
 /*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/09 07:52:01 by tgouedar          #+#    #+#             */
-/*   Updated: 2019/08/24 15:58:31 by tgouedar         ###   ########.fr       */
+/*   Updated: 2019/08/24 21:25:31 by tgouedar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,18 @@
 
 #include <stdio.h>
 
-
 void	print_bytes(void *ptr, int size)
 {
-	unsigned char *p = ptr;
-	int i;
-	for (i=0; i<size; i++)
+	int				i;
+	unsigned char	*p;
+
+	p = ptr;
+	i = 0;
+	while (i < size)
+	{
+		i++;
 		printf("%02hhX ", p[i]);
+	}
 	printf("\n\r");
 }
 
@@ -45,7 +50,7 @@ void	ft_clear_line(t_cursor *cursor)
 	tputs(buff, 1, &ft_pc);
 }
 
-int		main()
+int		main(void)
 {
 	char		buff[MAX_KEY_SIZE];
 	t_cursor	cursor;

@@ -6,7 +6,7 @@
 /*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/30 21:35:32 by tgouedar          #+#    #+#             */
-/*   Updated: 2019/08/24 21:16:07 by tgouedar         ###   ########.fr       */
+/*   Updated: 2019/08/24 21:43:20 by tgouedar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ t_cap		g_termcap[] =
 	{LEFT_CODE, &ft_left_cursor},
 	{CTRL_B_CODE, &ft_left_cursor},
 	{BACKSPACE_CODE, &ft_backspace},
+	{META_BKSPC_CODE, &ft_cut_prev_word},
 	{CTRL_H_CODE, &ft_backspace},
 /*	{TAB_CODE, &ft_autocomplete},
 	{CTRL_Z_CODE, &ft_sig_stop_program},

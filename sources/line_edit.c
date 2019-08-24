@@ -6,7 +6,7 @@
 /*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/09 10:42:18 by tgouedar          #+#    #+#             */
-/*   Updated: 2019/08/24 15:38:41 by tgouedar         ###   ########.fr       */
+/*   Updated: 2019/08/24 21:42:48 by tgouedar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int		ft_del_next_word(t_cursor *cursor)
 	ft_update_line(cursor, NULL);
 	return (1);
 }
+
 int		ft_backspace(t_cursor *cursor)
 {
 	size_t		new_cursor;

@@ -6,7 +6,7 @@
 /*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/13 20:38:54 by tgouedar          #+#    #+#             */
-/*   Updated: 2019/08/07 14:21:39 by tgouedar         ###   ########.fr       */
+/*   Updated: 2019/08/24 21:49:54 by tgouedar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static void			ft_part_list(t_dlist *lst_start, t_dlist **new_head)
 	slow->next = NULL;
 }
 
-static t_dlist	*ft_merge_list(t_dlist *lst1, t_dlist *lst2,
+static t_dlist		*ft_merge_list(t_dlist *lst1, t_dlist *lst2,
 							int (*ft_cmp)(t_dlist *, t_dlist*), int flag)
 {
 	t_dlist		*new_lst;

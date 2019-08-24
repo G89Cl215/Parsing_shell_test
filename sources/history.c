@@ -6,7 +6,7 @@
 /*   By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/08 12:06:54 by tgouedar          #+#    #+#             */
-/*   Updated: 2019/08/22 14:36:24 by tgouedar         ###   ########.fr       */
+/*   Updated: 2019/08/24 21:26:59 by tgouedar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,8 @@ int		ft_up_cursor(t_cursor *cursor)
 	if (!(cursor->in_history))
 	{
 		cursor->in_history = 1;
-		ft_dlistadd_start(&(cursor->history), ft_new_dnod(cursor->cmd_line, CUR_CMD));
+		ft_dlistadd_start(&(cursor->history),
+				ft_new_dnod(cursor->cmd_line, CUR_CMD));
 	}
 	if ((cursor->history) && ((cursor->history)->next))
 	{
@@ -70,7 +71,8 @@ int		ft_down_cursor(t_cursor *cursor)
 	if (!(cursor->in_history))
 	{
 		cursor->in_history = 1;
-		ft_dlistadd_start(&(cursor->history), ft_new_dnod(cursor->cmd_line, CUR_CMD));
+		ft_dlistadd_start(&(cursor->history),
+				ft_new_dnod(cursor->cmd_line, CUR_CMD));
 	}
 	if ((cursor->history) && (cursor->history)->prev)
 	{

@@ -6,7 +6,7 @@
 #    By: tgouedar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/24 11:39:40 by tgouedar          #+#    #+#              #
-#    Updated: 2019/08/24 18:45:00 by tgouedar         ###   ########.fr        #
+#    Updated: 2019/08/24 21:39:56 by tgouedar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ up & down			cycle through history										OK
 meta_a				enter + up													
 meta_b				move cursor to start of previous word						OK
 meta_c				capitalize next char and move to end of word				
-meta_d				delete next word (from cursor position)						OK
+meta_d				cut next word (from cursor), saving it in clipboard			OK
 meta_e
 meta_f				move cursor to start of next word							OK
 meta_g
@@ -45,7 +45,7 @@ meta_w
 meta_x
 meta_y
 meta_z
-meta_backspace
+meta_backspace		cut previous word (from cursor), saving it in clipboard		OK
 ctrl_a				move cursor to start of line								OK
 ctrl_b				move cursor back one char									OK
 ctrl_c				interupt current processus, killing it						
